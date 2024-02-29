@@ -12,7 +12,14 @@
 body{
     background: linear-gradient(to bottom, #000000, #000000e6, #000000d9);
     background-repeat: no-repeat;
-    height: 100vh;}
+    height: 100vh;
+}
+
+.top-section{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 a:visited {
     /* Override default styling */
