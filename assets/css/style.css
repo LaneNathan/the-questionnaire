@@ -38,6 +38,7 @@ button{
 p{
     font-size: 2rem;
     margin-inline: 1rem;
+    color: #adadad;
 }
 a:visited {
     /* Override default styling */
