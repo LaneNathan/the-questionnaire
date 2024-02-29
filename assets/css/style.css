@@ -5,9 +5,14 @@
     --tertiary: rgb(180,47,30);
     --black:#000000;
     --white:#ffffff;
-    --grey: #474444;
+    --grey: #211f1f;
 
 }
+
+body{
+    background: linear-gradient(to bottom, #000000, #000000e6, #000000d9);
+    background-repeat: no-repeat;
+    height: 100vh;}
 
 a:visited {
     /* Override default styling */
