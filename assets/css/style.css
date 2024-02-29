@@ -56,4 +56,16 @@ a:visited {
     color: var(--white);
 
 }
-
+ .timer{
+    color: white;
+    background-color: var(--secondary);
+}
+ .timer,
+ .scores{
+    padding: 4px;
+    padding-inline: 12px;
+    border-radius: 11px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(98 98 102);
+ }
