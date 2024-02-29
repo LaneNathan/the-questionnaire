@@ -21,7 +21,7 @@ body{
 }
 
 .main-content{
-    color: white;
+    color: #9b9b9b;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
