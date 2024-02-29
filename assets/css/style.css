@@ -9,11 +9,22 @@
 
 }
 
+a:visited {
+    /* Override default styling */
+    color: inherit; /* Use the same color as the parent element */
+    text-decoration: none; /* Remove any underline or other decoration */
+  }
+  a:-webkit-any-link {
+    color: inherit;
+    cursor:auto;
+    text-decoration: none;
+  }
+
 .scores {
     display: block;
     background-color: var(--secondary);
     margin-right: 85rem;
-    color: white;
+    color: var(--white);
 
 }
 
