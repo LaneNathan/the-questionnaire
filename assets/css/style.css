@@ -31,7 +31,9 @@ body{
     margin-top: 7rem;
     margin-inline: 28rem;
 }
-
+p{
+    font-size: 3rem;
+}
 a:visited {
     /* Override default styling */
     color: inherit; /* Use the same color as the parent element */
