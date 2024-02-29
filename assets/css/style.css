@@ -32,7 +32,8 @@ body{
     margin-inline: 10rem;
 }
 p{
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-inline: 1rem;
 }
 a:visited {
     /* Override default styling */
