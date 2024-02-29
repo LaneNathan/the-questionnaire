@@ -9,3 +9,11 @@
 
 }
 
+.scores {
+    display: block;
+    background-color: var(--secondary);
+    margin-right: 85rem;
+    color: white;
+
+}
+
