@@ -12,3 +12,17 @@ var feedbackEl = document.getElementById('feedback');
 
 var sfxRight = new Audio('assets/sfx/correct.wav');
 var sfxWrong = new Audio('assets/sfx/wrong.wav');
+
+
+ function startQuiz(){
+    var startScreenEl = document.getElementById('start-screen');
+    startScreenEl.setAttribute('class','hide');
+
+    questionsEl.removeAttribute('class');
+
+    timerId = setInterval(clockTick, 1000);
+
+    timerEl.textContent = time;
+
+    getQuestion();
+}
