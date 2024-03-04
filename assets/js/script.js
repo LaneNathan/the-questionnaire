@@ -2,12 +2,12 @@ var currentQuestionIndex= 0;
 var timeLeft= questions.length * 15;
 var timerId;
 
-var questionsEl = document.getElementById('questions');
+var questionsEl = document.getElementById('questionnaire');
 var timerEl = document.getElementById('time');
 var choicesEl = document.getElementById('choices');
 var submitBtn = document.getElementById('submit');
 var startBtn = document.getElementById('start');
-var initialsEl = document.getElementById('initials');
+var userNameEl = document.getElementById('usern-name');
 var feedbackEl = document.getElementById('feedback');
 
 var sfxRight = new Audio('assets/sfx/correct.wav');
@@ -16,7 +16,7 @@ var sfxWrong = new Audio('assets/sfx/wrong.wav');
 
  function startQuiz(){
     var startScreenEl = document.getElementById('start-screen');
-    startScreenEl.setAttribute('class','hide');
+    startScreenEl.setAttribute('class', 'hide');
 
     questionsEl.removeAttribute('class');
 
@@ -25,4 +25,8 @@ var sfxWrong = new Audio('assets/sfx/wrong.wav');
     timerEl.textContent = time;
 
     getQuestion();
+}
+
+function getQuestion(){
+    var currentQuestion =currentQuestionIndex.title;
 }
