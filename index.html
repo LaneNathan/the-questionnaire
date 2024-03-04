@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Quiz</title>
-
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-<div class="top-section">
-    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+    <div class="wrapper">
+        <div class="top-section">
+            <div class="scores"><a href="highscores.html">View Highscores</a></div>
 
-    <div class="timer">Time: <span id="time">0</span></div>
+            <div class="timer">Time: <span id="time">0</span></div>
+            </div>
+        <div class="main-content"><h1 style="font-size: 3rem;color: #d97c7c;">Javascript Coding Quiz!!!</h1>
+             <p>Answer the following questions about coding within the time limit. Keep in mind that any incorrect answers will penalize your score and deduct your time by 15 seconds!</p>
+
+            <button type="submit">Start</button>
+        </div>
+        <div id="questionnaire" class="hide">
+            <h2 id="questions"></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end-screen" class="hide">
+            <h2>Nice Job! You're all done.</h2>
+                <p>Total score <span id="final-score"></span></p>
+            <p>Enter Your Name: <input type="text" id="user-name" max="10"/>
+                <button id="submit">submit</button>
+            </p>
+        </div>
+
+        <div id="feedback" class="feedback hide"></div>
+
+    <script src="./assets/js/script.js"></script>
     </div>
-    <div class="main-content"><h1 style="font-size: 3rem;color: #d97c7c;">Javascript Coding Quiz!!!</h1>
-    <p>Answer the following questions about coding within the time limit. Keep in mind that any incorrect answers will penalize your score and deduct your time by 15 seconds!</p>
-
-    <button type="submit">Start</button>
-</div>
-
-<script src="./assets/js/script.js"></script>
-
 </body>
 
 
