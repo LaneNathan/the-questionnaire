@@ -10,5 +10,5 @@ var startBtn = document.getElementById('start');
 var initialsEl = document.getElementById('initials');
 var feedbackEl = document.getElementById('feedback');
 
-var sfxRight = new Audio('assets/sfx/correct.wav');
+var sfxRight = new Audio('./')
 var sfxWrong = new Audio('assets/sfx/incorrect.wav');
