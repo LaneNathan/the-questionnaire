@@ -111,5 +111,21 @@ function clockTick(){
 }
 
 function saveHighscore(){
-    
+    var name = userNameEl.value.trim();
+
+    if(name!== ''){
+        var highscores=
+        JSON.parse(window.localStorage.getItem('highscores')) || [];
+
+        var newScore= {
+            score: time,
+            name: name,
+        };
+
+        highscores.push(newScore);
+        window.localStorage.setItem('highschores' ,JSON.stringify(highscores));
+
+        window.location.href = 'highscores.html';
+    }
 }
+
