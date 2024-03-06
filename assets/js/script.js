@@ -46,3 +46,46 @@ function getQuestion(){
 
 }
 }
+
+function questionClick(event){
+    var buttonEl = event.target;
+    var respond = feedbackEl.textContent;
+
+    if(!buttonEl.matches('.choice')){
+        return;
+    }
+
+    if(buttonEl.value !==questions[currentQuestionIndex].answer){
+
+        time -= 15;
+
+        if(time<0){
+            time=0;
+        }
+
+        timerEl.textContent = time;
+        sfxWrong.play();
+
+       respond = 'Nah, Wrong!';
+    }else{
+        sfxRight.play();
+
+        Respond = 'Right!';
+    }
+
+    feedbackEl.setAttribute('class' , 'feedback');
+    setTimeout(function (){
+        feedbackEl.setAttribute('class' , 'feedback hide');
+     }, 1000);
+
+     currentQuestionIndex++;
+
+     if(time<=0 || currentQuestionIndex === questions.length){
+        quizEnd();
+     }else {
+        getQuestion();
+     }
+
+
+}
+
