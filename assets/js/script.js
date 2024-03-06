@@ -101,3 +101,15 @@ function quizEnd(){
     questionsEl.setAttribute('class' , 'hide');
 }
 
+function clockTick(){
+    time--;
+    timerEl.textContent = time;
+
+    if(time<= 0) {
+        quizEnd();
+    }
+}
+
+function saveHighscore(){
+    
+}
