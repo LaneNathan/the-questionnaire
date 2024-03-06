@@ -28,5 +28,21 @@ var sfxWrong = new Audio('assets/sfx/wrong.wav');
 }
 
 function getQuestion(){
-    var currentQuestion =currentQuestionIndex.title;
+    var currentQuestion =questions[currentQuestionIndex.title];
+    var titleEl = document.getElementById('questions');
+     titleEl.textContent=currentQuestion.title;
+    
+     choicesEl.innerHTML='';
+
+     for(var i=0; i<currentQuestion.choices.length; i++){
+    var choiceSelection= document.createElement('button');
+    choiceSelection.setAttribute('class', 'choice');
+    choiceSelection.setAttribute('value' , choice);
+
+    choiceSelection.textContent = i + 1 + '.' + choice;
+
+    choicesEl.appendChild(choiceSelection);
+
+
+}
 }
