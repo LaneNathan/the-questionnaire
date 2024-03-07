@@ -2,7 +2,7 @@ var currentQuestionIndex= 0;
 var timeLeft= questions.length * 15;
 var timerId;
 
-var questionsEl = document.getElementById('questions-title');
+var questionsEl = document.getElementById('questionnaire');
 var timerEl = document.getElementById('time');
 var choicesEl = document.getElementById('choices');
 var submitBtn = document.getElementById('submit');
@@ -35,6 +35,7 @@ function getQuestion(){
      choicesEl.innerHTML='';
 
      for(var i=0; i<currentQuestion.choices.length; i++){
+    var choice = currentQuestion.choices[i];
     var choiceSelection= document.createElement('button');
     choiceSelection.setAttribute('class', 'choice');
     choiceSelection.setAttribute('value' , choices);
