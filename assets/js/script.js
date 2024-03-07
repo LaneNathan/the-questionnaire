@@ -92,14 +92,14 @@ function questionClick(event){
 
 function quizEnd(){
     clearInterval(timerId);
-
     var endScreenEl = document.getElementById('end-screen');
     endScreenEl.removeAttribute('class');
 
     var finalScoreEl = document.getElementById('final-score');
     finalScoreEl.textContent = timeLeft;
 
-    questionsEl.setAttribute('class' , 'hide');
+
+    questionsEl.style.display = 'none'
 }
 
 function clockTick(){
