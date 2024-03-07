@@ -38,9 +38,9 @@ function getQuestion(){
     var choice = currentQuestion.choices[i];
     var choiceSelection= document.createElement('button');
     choiceSelection.setAttribute('class', 'choice');
-    choiceSelection.setAttribute('value' , choices);
+    choiceSelection.setAttribute('value' , choice);
 
-    choiceSelection.textContent = i + 1 + '.' + choices;
+    choiceSelection.textContent = i + 1 + '.' + choice;
 
     choicesEl.appendChild(choiceSelection);
 
