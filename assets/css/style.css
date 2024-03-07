@@ -48,6 +48,10 @@ button{
 #questions-title{
     color: #ffffff;
 }
+#choices{
+    display: contents;
+    line-height: 6px;
+}
 .hide{
     display: none;
 }
