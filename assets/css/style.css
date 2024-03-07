@@ -51,7 +51,7 @@ a:visited {
   }
   a:-webkit-any-link {
     color: inherit;
-    cursor:auto;
+    cursor:pointer;
     text-decoration: none;
   }
 
