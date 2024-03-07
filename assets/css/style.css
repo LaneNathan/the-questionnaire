@@ -36,6 +36,18 @@ button{
     margin-inline: 10rem;
 }
 
+#questionnaire{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#questions-title{
+    color: #ffffff;
+}
 .hide{
     display: none;
 }

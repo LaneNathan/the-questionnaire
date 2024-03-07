@@ -30,7 +30,7 @@ var sfxWrong = new Audio('assets/sfx/wrong.wav');
 function getQuestion(){
     var currentQuestion =questions[currentQuestionIndex];
     var titleEl = document.getElementById('questions-title');
-     titleEl.textContent=currentQuestion.questions;
+     titleEl.textContent=currentQuestion.question;
     
      choicesEl.innerHTML='';
 
@@ -56,7 +56,7 @@ function questionClick(event){
         return;
     }
 
-    if(buttonEl.value !==questionnaire[currentQuestionIndex].answer){
+    if(buttonEl.value !==questions[currentQuestionIndex].answer){
 
         time -= 15;
 
