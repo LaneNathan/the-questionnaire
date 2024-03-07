@@ -7,7 +7,7 @@ var timerEl = document.getElementById('time');
 var choicesEl = document.getElementById('choices');
 var submitBtn = document.getElementById('submit');
 var startBtn = document.getElementById('start');
-var userNameEl = document.getElementById('usern-name');
+var userNameEl = document.getElementById('user-name');
 var feedbackEl = document.getElementById('feedback');
 
 var sfxRight = new Audio('assets/sfx/correct.wav');
