@@ -49,8 +49,11 @@ button{
     color: #ffffff;
 }
 #choices{
-    display: contents;
+    display: flex;
     line-height: 6px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .hide{
     display: none;
