@@ -22,7 +22,7 @@ var sfxWrong = new Audio('assets/sfx/wrong.wav');
 
     timerId = setInterval(clockTick, 1000);
 
-    timerEl.textContent = time;
+    timerEl.textContent = timeLeft;
 
     getQuestion();
 }
@@ -58,13 +58,13 @@ function questionClick(event){
 
     if(buttonEl.value !==questions[currentQuestionIndex].answer){
 
-        time -= 15;
+        timeLeft -= 15;
 
-        if(time<0){
-            time=0;
+        if(timeLeft<0){
+            timeLeft=0;
         }
 
-        timerEl.textContent = time;
+        timerEl.textContent = timeLeft;
         sfxWrong.play();
 
        respond = 'Nah, Wrong!';
@@ -81,7 +81,7 @@ function questionClick(event){
 
      currentQuestionIndex++;
 
-     if(time<=0 || currentQuestionIndex === questions.length){
+     if(timeLeft<=0 || currentQuestionIndex === questions.length){
         quizEnd();
      }else {
         getQuestion();
@@ -97,16 +97,16 @@ function quizEnd(){
     endScreenEl.removeAttribute('class');
 
     var finalScoreEl = document.getElementById('final-score');
-    finalScoreEl.textContent = time;
+    finalScoreEl.textContent = timeLeft;
 
     questionsEl.setAttribute('class' , 'hide');
 }
 
 function clockTick(){
-    time--;
-    timerEl.textContent = time;
+    timeLeft--;
+    timerEl.textContent = timeLeft;
 
-    if(time<= 0) {
+    if(timeLeft<= 0) {
         quizEnd();
     }
 }
@@ -119,7 +119,7 @@ function saveHighscore(){
         JSON.parse(window.localStorage.getItem('highscores')) || [];
 
         var newScore= {
-            score: time,
+            score: timeLeft,
             name: name,
         };
 
