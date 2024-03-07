@@ -1,7 +1,7 @@
 var questions= [ 
     {
         question:'What is an Array?',
-        choices:[' a collection of elements of the same data type','a guy named Ray','a type of stingray','a web program'],
+        choices:['a collection of elements of the same data type','a guy named Ray','a type of stingray','a web program'],
         answer:'a collection of elements of the same data type',
     },
     {
@@ -11,7 +11,7 @@ var questions= [
     },
     {
         question:'Which of the following can be used to call a JavaScript Code Snippet?',
-        choices:[' Function/Method','Preprocessor','Triggering Event','css'],
+        choices:['Function/Method','Preprocessor','Triggering Event','css'],
         answer:'Function/Method',
     },
     {
