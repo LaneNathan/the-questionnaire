@@ -35,6 +35,10 @@ button{
     margin-top: 7rem;
     margin-inline: 10rem;
 }
+
+.hide{
+    display: none;
+}
 p{
     font-size: 2rem;
     margin-inline: 1rem;
