@@ -2,7 +2,7 @@ var currentQuestionIndex= 0;
 var timeLeft= questions.length * 15;
 var timerId;
 
-var questionsEl = document.getElementById('questionnaire');
+var questionsEl = document.getElementById('questions-title');
 var timerEl = document.getElementById('time');
 var choicesEl = document.getElementById('choices');
 var submitBtn = document.getElementById('submit');
@@ -28,18 +28,18 @@ var sfxWrong = new Audio('assets/sfx/wrong.wav');
 }
 
 function getQuestion(){
-    var currentQuestion =questions[currentQuestionIndex.title];
-    var titleEl = document.getElementById('questions');
-     titleEl.textContent=currentQuestion.title;
+    var currentQuestion =questions[currentQuestionIndex];
+    var titleEl = document.getElementById('questions-title');
+     titleEl.textContent=currentQuestion.questions;
     
      choicesEl.innerHTML='';
 
      for(var i=0; i<currentQuestion.choices.length; i++){
     var choiceSelection= document.createElement('button');
     choiceSelection.setAttribute('class', 'choice');
-    choiceSelection.setAttribute('value' , choice);
+    choiceSelection.setAttribute('value' , choices);
 
-    choiceSelection.textContent = i + 1 + '.' + choice;
+    choiceSelection.textContent = i + 1 + '.' + choices;
 
     choicesEl.appendChild(choiceSelection);
 
@@ -55,7 +55,7 @@ function questionClick(event){
         return;
     }
 
-    if(buttonEl.value !==questions[currentQuestionIndex].answer){
+    if(buttonEl.value !==questionnaire[currentQuestionIndex].answer){
 
         time -= 15;
 
