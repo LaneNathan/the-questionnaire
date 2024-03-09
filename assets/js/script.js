@@ -51,7 +51,6 @@ function getQuestion(){
 
 function questionClick(event){
     var buttonEl = event.target;
-    var respond = feedbackEl.textContent;
 
     if(!buttonEl.matches('.choice')){
         return;
@@ -68,11 +67,11 @@ function questionClick(event){
         timerEl.textContent = timeLeft;
         sfxWrong.play();
 
-       respond = 'Nah, Wrong!';
+        feedbackEl.textContent = 'Nah, Wrong!';
     }else{
         sfxRight.play();
 
-        Respond = 'Right!';
+        feedbackEl.textContent = 'Right!';
     }
 
     feedbackEl.setAttribute('class' , 'feedback');
