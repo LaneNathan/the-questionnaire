@@ -75,9 +75,9 @@ function questionClick(event){
         Respond = 'Right!';
     }
 
-    respond.setAttribute('class' , 'feedback');
+    feedbackEl.setAttribute('class' , 'feedback');
     setTimeout(function (){
-        respond.setAttribute('class' , 'feedback hide');
+        feedbackEl.setAttribute('class' , 'feedback hide');
      }, 1000);
 
      currentQuestionIndex++;
