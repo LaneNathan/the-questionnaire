@@ -83,6 +83,10 @@ a:visited {
     align-items: center;
   }
 
+  h1{
+    color: var(--white);
+  }
+
   h2{
     color: var(--white);
   }
@@ -106,4 +110,13 @@ a:visited {
     border-width: 2px;
     border-color: rgb(98 98 102);
     color: rgb(255 147 133);
+ }
+
+ .score-display{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
  }
