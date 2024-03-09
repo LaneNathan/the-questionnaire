@@ -75,9 +75,9 @@ function questionClick(event){
         Respond = 'Right!';
     }
 
-    feedbackEl.setAttribute('class' , 'feedback');
+    respond.setAttribute('class' , 'feedback');
     setTimeout(function (){
-        feedbackEl.setAttribute('class' , 'feedback hide');
+        respond.setAttribute('class' , 'feedback hide');
      }, 1000);
 
      currentQuestionIndex++;
@@ -97,7 +97,7 @@ function questionClick(event){
 
 function quizEnd(){
     clearInterval(timerId);
-    
+
     endScreenEl.style.display= 'flex';
     
     var finalScoreEl = document.getElementById('final-score');
