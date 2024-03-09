@@ -23,4 +23,4 @@ function clearHighscore(){
 
 document.getElementById('clear').onclick = clearHighscore;
 
-printHighscores();
+getHighScores();
