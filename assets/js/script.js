@@ -9,10 +9,11 @@ var submitBtn = document.getElementById('submit');
 var startBtn = document.getElementById('start');
 var userNameEl = document.getElementById('user-name');
 var feedbackEl = document.getElementById('feedback');
-
+var endScreenEl = document.getElementById('end-screen');
 var sfxRight = new Audio('assets/sfx/correct.wav');
 var sfxWrong = new Audio('assets/sfx/wrong.wav');
 
+endScreenEl.style.display = 'none';
 
  function startQuiz(){
     var startScreenEl = document.getElementById('start-screen');
@@ -90,16 +91,20 @@ function questionClick(event){
 
 }
 
+
+
+
+
 function quizEnd(){
     clearInterval(timerId);
-    var endScreenEl = document.getElementById('end-screen');
-    endScreenEl.removeAttribute('class');
-
+    
+    endScreenEl.style.display= 'flex';
+    
     var finalScoreEl = document.getElementById('final-score');
     finalScoreEl.textContent = timeLeft;
 
 
-    questionsEl.style.display = 'none'
+    questionsEl.style.display = 'none';
 }
 
 function clockTick(){
